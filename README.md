@@ -3,7 +3,7 @@ Recommended the semantic version to apply in your master branch using tomzx/php-
 
 #Installation
 ```
-composer require jimixjay/semver-recommendation
+composer require --dev jimixjay/semver-recommendation
 ```
 
 #Usage
@@ -16,7 +16,7 @@ protected $commands = [
 ];
 ```
 
-In your console terminal, you can run the command like this:
+The current version will compare only the "app" folder of your application. In your console terminal, you can run the command like this.:
 
 ```
 php artisan semver:recommendation
