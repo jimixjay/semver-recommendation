@@ -3,7 +3,7 @@ Recommended the semantic version to apply in your master branch using tomzx/php-
 
 #Installation
 ```
-composer require jimixjay/semver-recommendation
+composer require --dev jimixjay/semver-recommendation
 ```
 
 #Usage
