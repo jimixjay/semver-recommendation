@@ -5,8 +5,8 @@ namespace Jimixjay\SemverRecommendation;
 
 use Exception;
 use Illuminate\Console\Command;
-use Jimixjay\Exceptions\FailExec;
-use Jimixjay\Exceptions\IncorrectVersionFormat;
+use Jimixjay\SemverRecommendation\Exception\FailExec;
+use Jimixjay\SemverRecommendation\Exception\IncorrectVersionFormat;
 
 class SemverRecommendation extends Command
 {
@@ -46,7 +46,7 @@ class SemverRecommendation extends Command
 
             $this->cloneLastVersion();
 
-            $result = shell_exec('php vendor/bin/php-semver-checker compare temp-repository/app app');
+            $result = shell_exec('php vendor/tomzx/php-semver-checker/bin/php-semver-checker compare temp-repository/app app');
             $level  = substr($result, strpos($result, 'Suggested semantic versioning change: ') + 38, 5);
 
             $msg = 'No changes detected, so you don\'t need to change your code version' . $level;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Jimixjay\Exceptions;
+namespace Jimixjay\SemverRecommendation\Exception;
 
 use Exception;
 use Throwable;
