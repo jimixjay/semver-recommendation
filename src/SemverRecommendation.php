@@ -5,8 +5,6 @@ namespace Jimixjay\SemverRecommendation;
 
 use Exception;
 use Illuminate\Console\Command;
-use Jimixjay\SemverRecommendation\Exception\FailExec;
-use Jimixjay\SemverRecommendation\Exception\IncorrectVersionFormat;
 
 class SemverRecommendation extends Command
 {
@@ -86,7 +84,7 @@ class SemverRecommendation extends Command
         $versionExploded = explode('.', $this->lastVersion);
 
         if (count($versionExploded) != 3) {
-            throw new IncorrectVersionFormat($this->lastVersion);
+            throw new Exception('Version format is not correct (x.y.z expected) <' . $this->lastVersion . ' received>', 501);
         }
     }
 
@@ -108,7 +106,7 @@ class SemverRecommendation extends Command
     private function assertResponseWasCorrect($response, $msg, $code)
     {
         if ($response != 0) {
-            throw new FailExec($msg, $code);
+            throw new Exception($msg, $code);
         }
     }
 
