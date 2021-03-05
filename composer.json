@@ -1,0 +1,31 @@
+{
+  "name": "jimixjay/semver-recommendation",
+  "description": "semver:recommendation for Lumen framework.",
+  "license": "MIT",
+  "keywords": [
+    "lumen",
+    "semver",
+    "semantic",
+    "versioning",
+    "console"
+  ],
+  "authors": [
+    {
+      "name": "Jaime Martínez",
+      "email": "jimixjay@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Jimixjay\\SemverRecommendation\\": "src"
+    }
+  },
+  "minimum-stability": "stable",
+  "require": {
+    "php": "^7.2",
+    "illuminate/console": "^8.0",
+    "illuminate/filesystem": "^8.0",
+    "illuminate/support": "^8.0",
+    "tomzx/php-semver-checker": "dev-master"
+  }
+}
